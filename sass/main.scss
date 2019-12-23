@@ -1,0 +1,61 @@
+:root {
+  --color-accent: #ecd018;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
+
+body {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, Helvetica Neue,
+    Helvetica, Arial, sans-serif; }
+
+.wrapper {
+  max-width: 750px;
+  background-color: #eee;
+  margin: 3rem auto;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+}
+.photo {
+  img {
+    max-width: 500px;
+    width: 100%;
+  }
+}
+// .headlines {
+
+// }
+.headline-top,
+.headline-bottom {
+  background-color: var(--color-accent);
+  display: table;
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: .12rem;
+  text-transform: uppercase;
+}
+
+.headline {
+  &-top {
+    margin-left: 3rem;
+    padding: 1rem .5rem 0 0.5rem;
+  }
+  &-line {
+    color: #000;
+    background-color: #000;
+    height: 3px;
+    width: 100%;
+    margin-top: -13px;
+  }
+  &-bottom {
+    color: var(--color-accent);
+    padding: 0 .5rem 1rem 0.5rem;
+    margin-left: 3rem;
+    text-shadow:
+		-2px -2px 0 #000,
+		2px -2px 0 #000,
+		-2px 2px 0 #000,
+		2px 2px 0 #000;
+  }
+}
